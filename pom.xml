@@ -19,6 +19,11 @@
 	    <version>4.10.0</version>
 	</dependency>
 
+	<dependency>
+		<groupId>CursSelenium</groupId>
+		<artifactId>CursSelenium</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
   </dependencies> 
   
 </project>
