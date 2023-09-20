@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 
 public class BaseTest {
 	
-	public WebDriver driver;
+	public static WebDriver driver;
 	public BasePage app;
 	
 	@BeforeClass
@@ -22,13 +22,16 @@ public class BaseTest {
 		driver.get("https://keybooks.ro/");
 		//driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 		//driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
-	    app = new BasePage();
+		app = new BasePage();
 	}
 	
 	@AfterClass
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(4000);// bad practice
-		driver.close();	}
+		driver.close();	//inchide doar tabul curent
+		//driver.quit();// inchide browserul indifiernt cate tab-uri are deschise 
+		
+	}
 	
 
 }

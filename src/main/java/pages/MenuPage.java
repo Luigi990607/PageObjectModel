@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class MenuPage {
 	
@@ -23,12 +21,19 @@ public class MenuPage {
 	public By shopLink = By.linkText("BOOKS");
 	public By blogLink = By.linkText("BLOG");
 	public By aboutLink = By.linkText("ABOUT");
+	public By eventsLink = By.linkText("EVENTS");
+
+	public By searchIcon = By.cssSelector("button[class*='search_submit']");
+	public By searchInput = By.cssSelector("input[class='search_field']");
+	
 	
 	//metode specifice cu locatori sau elementele de mai sus
 	//metode specifice inseamna functionalitate a paginii in care ma aflu
 	public void navigateTo(By locator) {
+		
 		driver.findElement(locator).click();
 	}
+	
 	
 	public void hoverElement(By locator) {
 		WebElement element = driver.findElement(locator);
