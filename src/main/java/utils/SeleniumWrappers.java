@@ -44,5 +44,9 @@ public class SeleniumWrappers extends BaseTest {
 		driver.findElement(locator).sendKeys(text);
 		
 	}
+	public String getElementText(By locator){
+
+		return driver.findElement(locator).getText();
+		}
 	
 }
